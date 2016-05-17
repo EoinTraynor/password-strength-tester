@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Password Strength Tester</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/jumbotron-narrow.css">
+
+    <script src="//code.jquery.com/jquery-1.11.3.min.js" defer></script>
+    <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js" defer></script>
+    <script type="text/javascript" src="js/main.js" defer></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.min.js" defer></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+        <h3 class="text-muted">Password Strength Tester</h3>
+      </div>
+
+      <div class="jumbotron" id="showhide">
+          <form class="form-horizontal">
+              <fieldset>
+                <!-- Form Name -->
+                <legend>Test your password</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="testinput"></label>
+                  <div class="col-md-4">
+                  <input id="testinput" name="testinput" type="text" placeholder="Test Password" class="form-control input-md" required="">
+                  <span id="require_input"></span>
+                  </div>
+                </div>
+
+                <!-- Button -->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="singlebutton"></label>
+                  <div class="col-md-4">
+                    <button id="submit_button" type="button" name="singlebutton" class="btn btn-primary">Add Stats</button>
+                    <span class="help-block" class="danger">* Password not stored</span>
+                  </div>
+                </div>
+            </fieldset>
+        </form>
+      </div>
+
+      <div class="row marketing">
+          <table class="table table-hover">
+              <tbody>
+                  <tr>
+                      <td>Score</td>
+                      <td id="score_value">50</td>
+                  </tr>
+                  <tr>
+                      <td>Complexity</td>
+                      <td id="complexity_value">Weak</td>
+                  </tr>
+                  <tr>
+                      <td>Uppercase</td>
+                      <td id="uppercase_value">0</td>
+                  </tr>
+                  <tr>
+                      <td>Lowercase</td>
+                      <td id="lowercase_value">0</td>
+                  </tr>
+                  <tr>
+                      <td>Numbers</td>
+                      <td id="numbers_value">0</td>
+                  </tr>
+                  <tr>
+                      <td>Symbols</td>
+                      <td id="symbols_value">0</td>
+                  </tr>
+                  <tr>
+                      <td>Over Eight Characters</td>
+                      <td id="char_length_value">0</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+
+      <div class="row marketing">
+          <table class="table">
+              <tbody id="display_stats">
+                  <tr>
+                      <th>Score</th>
+                      <th>Complexity</th>
+                      <th>Uppercase</th>
+                      <th>Lowercase</th>
+                      <th>Numbers</th>
+                      <th>Symbols</th>
+                      <th>Over Eight Characters</th>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+
+      <div>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; Eoin Traynor 2015</p>
+      </footer>
+
+    </div> <!-- /container -->
+  </body>
+</html>
